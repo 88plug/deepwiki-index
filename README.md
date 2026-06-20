@@ -1,0 +1,54 @@
+<div align="center">
+
+# deepwiki-index
+
+**Make the "Ask DeepWiki" badge actually resolve — hands-free.** A skill that
+indexes a public repo's DeepWiki autonomously (no human clicking), using the
+verified trigger + a trusted browser so the reCAPTCHA passes silently.
+
+[![marketplace](https://img.shields.io/badge/marketplace-88plug-1f2328?style=flat-square)](https://github.com/88plug/claude-code-plugins)
+[![license](https://img.shields.io/badge/license-FSL--1.1--ALv2-1f2328?style=flat-square)](./LICENSE.md)
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/88plug/deepwiki-index)
+
+</div>
+
+---
+
+## Install
+
+```sh
+/plugin marketplace add 88plug/claude-code-plugins
+/plugin install deepwiki-index@88plug
+```
+
+## What it does
+
+Once installed, the agent will **index a public repo's DeepWiki automatically**
+after you publish it or add the badge — and when you ask it to "index the wiki."
+It does not stop to ask permission.
+
+It encodes the verified mechanics so it never has to re-research them:
+
+- **Trigger:** `POST https://api.devin.ai/ada/index_public_repo?repo_name=<o/r>&email_to_notify=<email>&recaptcha_token=<tok>`
+- **Status:** `GET https://api.devin.ai/ada/public_repo_indexing_status?repo_name=<o/r>`
+- The token is **mandatory** and is **reCAPTCHA v2-invisible** — a *trusted*
+  browser mints it with no challenge; datacenter/headless contexts get an image
+  challenge (which the skill will not solve).
+
+## Manual / batch use
+
+```sh
+npm i -D playwright && npx playwright install chromium
+# current repo:
+node scripts/index-deepwiki.mjs
+# a batch (best with your real profile so the captcha is silent):
+CHROME_USER_DATA_DIR="$HOME/.config/google-chrome" REPO=all node scripts/index-deepwiki.mjs
+```
+
+After the first index, DeepWiki re-crawls on its own — this is a one-time step
+per repo, not a per-commit job.
+
+## License
+
+[FSL-1.1-ALv2](./LICENSE.md).

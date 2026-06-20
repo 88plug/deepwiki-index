@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "deepwiki-index",
+  "description": "Hands-free, autonomous DeepWiki indexing for public repos.",
+  "owner": {
+    "name": "88plug",
+    "email": "andrew@88plug.com"
+  },
+  "plugins": [
+    {
+      "name": "deepwiki-index",
+      "source": ".",
+      "displayName": "DeepWiki Index",
+      "description": "Index a public GitHub repo's DeepWiki hands-free and autonomously — no human clicking. Verified trigger + trusted-browser token + status poll. Skill + bundled Playwright helper.",
+      "author": { "name": "88plug", "email": "andrew@88plug.com" },
+      "homepage": "https://github.com/88plug/deepwiki-index",
+      "license": "FSL-1.1-ALv2",
+      "category": "productivity",
+      "tags": ["type:plugin", "deepwiki", "documentation", "indexing", "automation", "github"]
+    }
+  ]
+}
