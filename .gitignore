@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+site/
+node_modules/
+
+
+# campaign sweep scripts — never commit
+scripts/sweep_r*.py
+eval_real_corpus.json
+.real_corpus_manifest.json
+eval_run_*.json
+EVAL_REPORT.md

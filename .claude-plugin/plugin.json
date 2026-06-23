@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "deepwiki-index",
   "displayName": "DeepWiki Index",
+  "version": "2026.6.23",
   "description": "Index a public GitHub repo's DeepWiki (the page the 'Ask DeepWiki' badge links to) hands-free, and do it autonomously after publishing or updating a repo — no human clicking. Encodes the verified deepwiki.com trigger (api.devin.ai/ada/index_public_repo, reCAPTCHA v2-invisible) and the trusted-browser path: drive the real desktop browser (screen-mcp) or run the bundled Playwright helper with a real Chrome profile so the captcha passes silently, then poll the public status API to completed.",
   "author": {
     "name": "88plug",
@@ -11,11 +12,25 @@
   "homepage": "https://github.com/88plug/deepwiki-index",
   "repository": "https://github.com/88plug/deepwiki-index.git",
   "keywords": [
+    "claude-code",
+    "claude",
+    "anthropic",
+    "ai",
+    "llm",
+    "ai-agents",
+    "developer-tools",
+    "productivity",
+    "automation",
+    "cli",
+    "claude-code-plugin",
+    "claude-skills",
     "deepwiki",
     "documentation",
     "indexing",
-    "automation",
     "github",
-    "wiki"
+    "wiki",
+    "recaptcha",
+    "devin",
+    "repo-indexing"
   ]
 }

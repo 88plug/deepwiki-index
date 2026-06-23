@@ -1,22 +1,14 @@
-<div align="center">
-
 # deepwiki-index
 
 **Make the "Ask DeepWiki" badge actually resolve — hands-free.** A skill that
 indexes a public repo's DeepWiki autonomously (no human clicking), using the
-verified trigger + a trusted browser so the reCAPTCHA passes silently.
+verified trigger plus a trusted browser so the reCAPTCHA passes silently.
 
 [![plugin-validate](https://github.com/88plug/deepwiki-index/actions/workflows/plugin-validate.yml/badge.svg)](https://github.com/88plug/deepwiki-index/actions/workflows/plugin-validate.yml)
-[![marketplace](https://img.shields.io/badge/marketplace-88plug-1f2328?style=flat-square)](https://github.com/88plug/claude-code-plugins)
-[![License: FSL-1.1-ALv2](https://img.shields.io/badge/license-FSL--1.1--ALv2-blue?style=flat)](./LICENSE.md)
+[![License: FSL-1.1-ALv2](https://img.shields.io/badge/license-FSL--1.1--ALv2-blue?style=flat)](https://github.com/88plug/deepwiki-index/blob/main/LICENSE.md)
 [![Docs](https://img.shields.io/badge/docs-online-blue?style=flat)](https://88plug.github.io/deepwiki-index)
 [![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2?style=flat)](https://github.com/88plug/claude-code-plugins)
-
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/88plug/deepwiki-index)
-
-</div>
-
----
 
 ## Install
 
@@ -39,6 +31,10 @@ It encodes the verified mechanics so it never has to re-research them:
   browser mints it with no challenge; datacenter/headless contexts get an image
   challenge (which the skill will not solve).
 
+!!! note
+    After the first index, DeepWiki re-crawls on its own — this is a one-time
+    step per repo, not a per-commit job.
+
 ## Manual / batch use
 
 ```sh
@@ -49,9 +45,14 @@ node scripts/index-deepwiki.mjs
 CHROME_USER_DATA_DIR="$HOME/.config/google-chrome" REPO=all node scripts/index-deepwiki.mjs
 ```
 
-After the first index, DeepWiki re-crawls on its own — this is a one-time step
-per repo, not a per-commit job.
+## Development
+
+```sh
+python3 .ci/validate_plugin.py .
+bash tests/smoke.sh
+```
 
 ## License
 
-[FSL-1.1-ALv2](./LICENSE.md).
+[FSL-1.1-ALv2](https://github.com/88plug/deepwiki-index/blob/main/LICENSE.md).
+See the [changelog](https://github.com/88plug/deepwiki-index/blob/main/CHANGELOG.md).
