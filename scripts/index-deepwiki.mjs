@@ -42,7 +42,7 @@ const arg = (process.env.REPO || '').trim();
 const REPOS = arg.toLowerCase() === 'all' ? ALL
   : arg ? arg.split(',').map((s) => s.trim()).filter(Boolean)
   : [currentRepo()].filter(Boolean);
-const EMAIL = process.env.EMAIL || 'andrew@88plug.com';
+const EMAIL = process.env.EMAIL || 'notify@example.com';
 const HEADLESS = process.env.HEADLESS === '1';
 const USER_DATA_DIR = process.env.CHROME_USER_DATA_DIR || '';
 const PER_REPO_TIMEOUT_MS = parseInt(process.env.INDEX_TIMEOUT_MS || '720000', 10);

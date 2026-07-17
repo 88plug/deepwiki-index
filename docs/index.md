@@ -155,7 +155,7 @@ CHROME_USER_DATA_DIR="$HOME/.config/google-chrome" \
 | Variable | Default | Meaning |
 |---|---|---|
 | `REPO` | current `origin` | `owner/name`, comma-list, or `all` |
-| `EMAIL` | `andrew@88plug.com` | Notify email on the trigger |
+| `EMAIL` | `notify@example.com` | Notify email on the trigger (`EMAIL=your@domain.com`) |
 | `CHROME_USER_DATA_DIR` | _(empty)_ | Persistent Chrome profile for silent tokens |
 | `HEADLESS` | off (`0`) | Set `1` for headless (often fails silent mint) |
 | `INDEX_TIMEOUT_MS` | `720000` (12 min) | Per-repo poll deadline |
