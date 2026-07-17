@@ -1,10 +1,10 @@
 {
   "name": "deepwiki-index",
   "source": {
-    "source": "github",
-    "repo": "88plug/deepwiki-index"
+    "source": "url",
+    "url": "https://github.com/88plug/deepwiki-index.git"
   },
-  "description": "Index a public GitHub repo's DeepWiki (the 'Ask DeepWiki' badge target) hands-free and autonomously — no human clicking. Encodes the verified deepwiki.com trigger (api.devin.ai/ada/index_public_repo, reCAPTCHA v2-invisible) plus the trusted-browser path (drive the real desktop via screen-mcp, or the bundled Playwright helper with a real Chrome profile) so the captcha passes silently, then polls the public status API to completed.",
+  "description": "Index a public GitHub repo's DeepWiki (the 'Ask DeepWiki' badge target) hands-free and autonomously \u2014 no human clicking. Encodes the verified deepwiki.com trigger (api.devin.ai/ada/index_public_repo, reCAPTCHA v2-invisible) plus the trusted-browser path (drive the real desktop via screen-mcp, or the bundled Playwright helper with a real Chrome profile) so the captcha passes silently, then polls the public status API to completed.",
   "category": "productivity",
   "tags": [
     "type:plugin",

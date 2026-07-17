@@ -24,10 +24,26 @@ import { execSync } from 'node:child_process';
 
 const API = 'https://api.devin.ai';
 const SITEKEY = '6LeK1G0rAAAAAGVDKn-92dkphJzZvEobSLCyZJg4';
+// Full 88plug marketplace set (hub + every sources/* plugin). Keep in sync when
+// adding a fleet plugin — REPO=all should never silently miss new repos.
 const ALL = [
-  'claude-code-plugins', 'searxng-mcp', 'total-recall', 'amnesia', 'deepwiki',
-  'scientific-method', 'drive-remote-terminal', 'project-prospector', 'screen-mcp',
-  'recover-from-false-positive', 'caveman-plus', 'use-latest-version-mcp', 'deepwiki-index',
+  'claude-code-plugins',
+  'addlightness',
+  'amnesia',
+  'caveman-plus',
+  'deepwiki',
+  'deepwiki-index',
+  'drift-detector',
+  'drive-remote-terminal',
+  'os-control-mcp',
+  'project-prospector',
+  'recover-from-false-positive',
+  'scientific-method',
+  'screen-mcp',
+  'searxng-mcp',
+  'total-recall',
+  'trigger-my-training',
+  'use-latest-version-mcp',
 ].map((r) => `88plug/${r}`);
 
 function currentRepo() {
