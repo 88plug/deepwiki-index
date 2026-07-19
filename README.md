@@ -2,7 +2,7 @@
 
 # DeepWiki Index
 
-**DeepWiki indexing** for Claude Code — autonomously index public GitHub repos so the Ask DeepWiki badge resolves, using the verified API trigger and a trusted browser for silent reCAPTCHA.
+**DeepWiki indexing** for Claude Code and Grok — autonomously index public GitHub repos so the Ask DeepWiki badge resolves, using the verified API trigger and a trusted browser for silent reCAPTCHA.
 
 [![plugin-validate](https://github.com/88plug/deepwiki-index/actions/workflows/plugin-validate.yml/badge.svg)](https://github.com/88plug/deepwiki-index/actions/workflows/plugin-validate.yml)
 [![License: FSL-1.1-ALv2](https://img.shields.io/badge/license-FSL--1.1--ALv2-blue?style=flat)](./LICENSE)
@@ -12,14 +12,16 @@
 
 </div>
 
-deepwiki-index is a Claude Code skill and CLI helper for DeepWiki documentation
-indexing. After you publish a public repo or add the badge, the agent triggers
-indexing hands-free, mints the reCAPTCHA token in a trusted browser, and polls
-the public status API until the wiki is ready. It is for developers and AI
-agents who want batch-processing of repo wikis without re-researching Devin's
-public endpoints.
+deepwiki-index is a Claude Code and Grok skill plus CLI helper for DeepWiki
+documentation indexing. After you publish a public repo or add the badge, the
+agent triggers indexing hands-free, mints the reCAPTCHA token in a trusted
+browser, and polls the public status API until the wiki is ready. It is for
+developers and AI agents who want batch-processing of repo wikis without
+re-researching Devin's public endpoints.
 
 ## Install
+
+### Claude Code
 
 ```text
 /plugin marketplace add 88plug/claude-code-plugins

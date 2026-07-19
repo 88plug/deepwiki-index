@@ -1,16 +1,18 @@
 # deepwiki-index
 
-**Make the "Ask DeepWiki" badge actually resolve — hands-free.** A Claude Code
-skill that indexes a public repo's DeepWiki autonomously (no human clicking),
-using the verified trigger plus a trusted browser so reCAPTCHA passes silently.
+**DeepWiki indexing** for Claude Code and Grok — autonomously index public
+GitHub repos so the Ask DeepWiki badge resolves, using the verified API trigger
+and a trusted browser for silent reCAPTCHA.
 
 [![plugin-validate](https://github.com/88plug/deepwiki-index/actions/workflows/plugin-validate.yml/badge.svg)](https://github.com/88plug/deepwiki-index/actions/workflows/plugin-validate.yml)
 [![License: FSL-1.1-ALv2](https://img.shields.io/badge/license-FSL--1.1--ALv2-blue?style=flat)](https://github.com/88plug/deepwiki-index/blob/main/LICENSE)
-[![Docs](https://img.shields.io/badge/docs-online-blue?style=flat)](https://88plug.github.io/deepwiki-index)
+[![Docs](https://img.shields.io/badge/docs-online-blue?style=flat)](https://88plug.github.io/deepwiki-index/)
 [![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2?style=flat)](https://github.com/88plug/claude-code-plugins)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/88plug/deepwiki-index)
 
 ## Install
+
+### Claude Code
 
 ```text
 /plugin marketplace add 88plug/claude-code-plugins

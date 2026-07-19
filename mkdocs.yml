@@ -1,5 +1,5 @@
 site_name: deepwiki-index
-site_description: 'DeepWiki indexing for Claude Code — autonomously index public GitHub repos so the Ask DeepWiki badge resolves, using the verified API trigger and a trusted browser for silent reCAPTCHA.'
+site_description: 'DeepWiki indexing for Claude Code and Grok — autonomously index public GitHub repos so the Ask DeepWiki badge resolves, using the verified API trigger and a trusted browser for silent reCAPTCHA.'
 site_author: 88plug
 site_url: https://88plug.github.io/deepwiki-index/
 repo_url: https://github.com/88plug/deepwiki-index
