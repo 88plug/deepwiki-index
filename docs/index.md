@@ -17,6 +17,14 @@ using the verified trigger plus a trusted browser so reCAPTCHA passes silently.
 /plugin install deepwiki-index@88plug
 ```
 
+### Grok Build
+
+```text
+grok plugin marketplace add 88plug/claude-code-plugins
+grok plugin install deepwiki-index@88plug --trust
+```
+
+
 Once installed, the skill is available to the agent. No extra config file is
 required. Manual/batch runs of the helper need Playwright (see
 [Manual / batch use](#manual-batch-use)).

@@ -26,6 +26,14 @@ public endpoints.
 /plugin install deepwiki-index@88plug
 ```
 
+### Grok Build
+
+```text
+grok plugin marketplace add 88plug/claude-code-plugins
+grok plugin install deepwiki-index@88plug --trust
+```
+
+
 No config file is required. Manual and batch runs of the helper need Playwright
 (see [Manual / batch use](#manual--batch-use)).
 
