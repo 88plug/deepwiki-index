@@ -1,4 +1,4 @@
-# deepwiki-index
+# DeepWiki Index
 
 **DeepWiki indexing** for Claude Code and Grok — autonomously index public
 GitHub repos so the Ask DeepWiki badge resolves, using the verified API trigger
@@ -48,6 +48,17 @@ Index the DeepWiki for this repo.
 !!! tip
     Prefer a **trusted local browser** (your real Chrome profile, or screen-mcp
     driving the desktop). Silent reCAPTCHA minting depends on that context.
+
+## Features
+
+| Capability | Detail |
+|---|---|
+| Autonomous indexing | Agent runs without asking after publish, badge add, or "index the wiki" |
+| Verified trigger | Encodes `api.devin.ai` DeepWiki endpoints — no re-research each session |
+| Trusted-browser token | screen-mcp desktop path or Playwright + real Chrome profile |
+| Status polling | Public API only; success means `completed` / `indexed`, not a button click |
+| Batch processing | One repo, comma-list, or full 88plug marketplace set (`REPO=all`) |
+| One-time bootstrap | DeepWiki re-crawls after the first index — not a per-commit CI job |
 
 ## When it auto-triggers
 
@@ -237,14 +248,3 @@ mkdocs build --strict
 
 [FSL-1.1-ALv2](https://github.com/88plug/deepwiki-index/blob/main/LICENSE).
 See the [changelog](https://github.com/88plug/deepwiki-index/blob/main/CHANGELOG.md).
-
-## Features
-
-| Capability | Detail |
-|---|---|
-| Autonomous indexing | Agent runs without asking after publish, badge add, or "index the wiki" |
-| Verified trigger | Encodes `api.devin.ai` DeepWiki endpoints — no re-research each session |
-| Trusted-browser token | screen-mcp desktop path or Playwright + real Chrome profile |
-| Status polling | Public API only; success means `completed` / `indexed`, not a button click |
-| Batch processing | One repo, comma-list, or full 88plug marketplace set (`REPO=all`) |
-| One-time bootstrap | DeepWiki re-crawls after the first index — not a per-commit CI job |

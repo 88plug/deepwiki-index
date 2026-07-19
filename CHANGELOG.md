@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.7.19
+
+- Smoke: REPO=all inventory requires hub + **18** marketplace plugins (floor 19).
+- Docs: Title Case H1; Features table above the fold (README parity).
+
 ## 2026.6.23
 
 - Initial release: hands-free, autonomous DeepWiki indexing for public GitHub repos.

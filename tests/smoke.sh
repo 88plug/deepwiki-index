@@ -9,22 +9,32 @@ for f in scripts/*.mjs; do
     node --check "$f" && echo "  ok: $f"
 done
 
-echo "=== smoke: REPO=all inventory (hub + 16 plugins) ==="
+echo "=== smoke: REPO=all inventory (hub + 18 plugins) ==="
 node --input-type=module -e "
 import { readFileSync } from 'node:fs';
 const s = readFileSync('scripts/index-deepwiki.mjs', 'utf8');
 const m = s.match(/const ALL = \[([\s\S]*?)\]\.map/);
 if (!m) { console.error('  FAIL: could not parse const ALL'); process.exit(1); }
 const names = [...m[1].matchAll(/'([^']+)'/g)].map((x) => x[1]);
-if (names.length < 17) {
-  console.error('  FAIL: ALL length ' + names.length + ' < 17 (hub + 16 plugins)');
+// hub + 18 marketplace plugins (live fleet count 2026-07)
+if (names.length < 19) {
+  console.error('  FAIL: ALL length ' + names.length + ' < 19 (hub + 18 plugins)');
   process.exit(1);
 }
 if (!names.includes('claude-code-plugins')) {
   console.error('  FAIL: hub claude-code-plugins missing from ALL');
   process.exit(1);
 }
-console.log('  ok: ALL length ' + names.length + ' (hub + plugins)');
+const required = [
+  'be-the-whole-bitch', 'dehumanize', 'deepwiki-index', 'amnesia', 'total-recall',
+];
+for (const r of required) {
+  if (!names.includes(r)) {
+    console.error('  FAIL: missing fleet plugin in ALL: ' + r);
+    process.exit(1);
+  }
+}
+console.log('  ok: ALL length ' + names.length + ' (hub + ' + (names.length - 1) + ' plugins)');
 "
 
 echo "=== smoke: hook bash syntax ==="
